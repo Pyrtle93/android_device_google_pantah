@@ -17,6 +17,9 @@ PRODUCT_PACKAGES += \
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
 
+# Face unlock
+include vendor/google/faceunlock/device.mk
+
 # Build necessary packages for vendor
 
 # Audio
