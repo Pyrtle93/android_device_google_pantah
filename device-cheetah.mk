@@ -232,6 +232,10 @@ PRODUCT_SOONG_NAMESPACES += \
     device/google/pantah/powerstats/cheetah \
     device/google/pantah
 
+# Expose AUX to Google Camera
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.aux.camera_oem_package=com.google.android.GoogleCamera
+
 # Fingerprint HAL
 GOODIX_CONFIG_BUILD_VERSION := g7_trusty
 include device/google/gs101/fingerprint/udfps_common.mk
