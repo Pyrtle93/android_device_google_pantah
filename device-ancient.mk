@@ -5,7 +5,7 @@
 #
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-ancient
 
 # EUICC
 PRODUCT_COPY_FILES += \
@@ -16,6 +16,12 @@ PRODUCT_PACKAGES += \
 
 # PowerShare
 include hardware/google/pixel/powershare/device.mk
+
+# Face unlock
+include vendor/google/faceunlock/device.mk
+
+# Udfps Animations & Icon Customization
+EXTRA_UDFPS_ANIMATIONS := true
 
 # Build necessary packages for vendor
 
