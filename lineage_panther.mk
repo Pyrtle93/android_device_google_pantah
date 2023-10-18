@@ -6,7 +6,7 @@
 
 # Inherit some common Lineage stuff.
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/lineage/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/google/pantah/aosp_panther.mk)
@@ -22,22 +22,7 @@ TARGET_ENABLE_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
 TARGET_USES_GOOGLE_DIALER_CARRIER_SETTINGS :=true
 TARGET_SUPPORTS_QUICK_TAP := true
-# Included by default
-TARGET_INCLUDE_GOOGLE_SETUP := true
-TARGET_INCLUDE_GOOGLE_FILE_MANAGER := true
-TARGET_INCLUDE_GOOGLE_BATTERY_STATS := true
-TARGET_INCLUDE_GOOGLE_CONTACTS := true
-TARGET_INCLUDE_GOOGLE_MESSAGING := true
-TARGET_INCLUDE_GOOGLE_CALENDAR := true
-TARGET_INCLUDE_GBOARD := true
-TARGET_INCLUDE_GOOGLE_APP := true
-TARGET_INCLUDE_GOOGLE_PHOTOS := true
-TARGET_INCLUDE_ANDROID_AUTO := true
-TARGET_INCLUDE_GOOGLE_CALCULATOR := true
-TARGET_INCLUDE_GOOGLE_CHROME := true
-TARGET_INCLUDE_GOOGLE_CLOCK := true
-TARGET_INCLUDE_GOOGLE_MARKUP := true
-TARGET_INCLUDE_GOOGLE_SOUNDS := true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 
 # Debugging
 TARGET_INCLUDE_MATLOG := true
