@@ -37,6 +37,11 @@ $(call soong_config_set,lyric,camera_hardware,panther)
 $(call soong_config_set,lyric,tuning_product,panther)
 $(call soong_config_set,google3a_config,target_device,panther)
 
+# sysconfig and permissions XML from stock
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/product-sysconfig-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/product-sysconfig-stock.xml \
+    $(LOCAL_PATH)/product-permissions-stock.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/product-permissions-stock.xml
+
 # Init files
 PRODUCT_COPY_FILES += \
 	device/google/pantah/conf/init.pantah.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.pantah.rc \
@@ -261,7 +266,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=25
+    ro.vendor.build.svn=27
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
