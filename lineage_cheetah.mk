@@ -14,14 +14,25 @@ $(call inherit-product, device/google/gs201/lineage_common.mk)
 
 include device/google/pantah/cheetah/device-lineage.mk
 
+# Matrixx
+WITH_GMS := true
+MATRIXX_MAINTAINER := Pyrtle93
+TARGET_HAS_UDFPS := true
+TARGET_INCLUDE_PIXEL_FRAMEWORK := true
+TARGET_USES_GOOGLE_DIALER_CARRIER_SETTINGS := true
+TARGET_FACE_UNLOCK_SUPPORTED := false
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_NGA := true
+TARGET_BOOT_ANIMATION_RES := 1440
+TENSOR_PIXEL2 := true
+
+# Parts
+$(call inherit-product-if-exists, vendor/google/pixelparts/pixelparts.mk)
+
 # Device identifier. This must come after all inclusions
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 7 Pro
 PRODUCT_NAME := lineage_cheetah
-
-# Boot animation
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \
