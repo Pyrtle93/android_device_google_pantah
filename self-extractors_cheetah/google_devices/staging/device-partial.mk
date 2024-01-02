@@ -17,9 +17,10 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # AOSP packages required by the blobs
 PRODUCT_PACKAGES := \
-    QualifiedNetworksService \
+    PixelQualifiedNetworksService \
     ShannonIms \
     ShannonRcs \
+    UwbVendorService \
 
 PRODUCT_PACKAGES += \
     libmediaadaptor \
@@ -28,4 +29,5 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES := \
     vendor/google_devices/cheetah/proprietary/com.shannon.imsservice.xml:system_ext/etc/permissions/com.shannon.imsservice.xml:samsung \
     vendor/google_devices/cheetah/proprietary/com.shannon.rcsservice.xml:system_ext/etc/permissions/com.shannon.rcsservice.xml:samsung \
+    vendor/google_devices/cheetah/proprietary/privapp-permissions-qorvo.xml:system_ext/etc/permissions/privapp-permissions-qorvo.xml:qorvo \
 
