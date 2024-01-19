@@ -8,6 +8,21 @@
 TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Matrixx
+MATRIXX_BUILD_TYPE := Official
+MATRIXX_MAINTAINER := Pyrtle93
+MATRIXX_CHIPSET := GS201
+MATRIXX_BATTERY := 5000mah
+MATRIXX_DISPLAY := 1440x3120
+
+# Matrixx Flags
+WITH_GMS := true
+TARGET_HAS_UDFPS := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_INCLUDE_PIXEL_FRAMEWORK := true
+TARGET_USES_GOOGLE_DIALER_CARRIER_SETTINGS :=true
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Inherit device configuration
 $(call inherit-product, device/google/pantah/aosp_cheetah.mk)
 $(call inherit-product, device/google/gs201/lineage_common.mk)
@@ -22,6 +37,7 @@ PRODUCT_NAME := lineage_cheetah
 # Boot animation
 TARGET_SCREEN_HEIGHT := 3120
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOT_ANIMATION_RES := 1440
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     TARGET_PRODUCT=cheetah \
